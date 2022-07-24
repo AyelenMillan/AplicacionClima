@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="https://favicon-generator.org/favicon-generator/htdocs/favicons/2022-07-24/4dec6d51cc23e307b69b632640c5f694.ico.png" >
+
+    <title>Clima</title>
+</head>
+<body>
+    
+    <nav class="navbar sticky-top navbar-dark bg-dark bg-gradient">
+        <h1 class="navbar-brand center font-custom">Aplicacion Clima </h1>
+           <form class="col-md-8 navbar-brand center" id="searchForm">
+            <div class="input-group w-fluid">
+              <input class="form-control form-control-sm  "  id="searchInput" type="search" placeholder="Ingrese ciudad" aria-label="Buscar">
+                 <button class="btn btn-outline-secondary  " id="searchBtn" type="submit">Buscar</button>
+                   <div class="col align-self-end"></div>       
+               <a class="btn btn-secondary bg-gradient col-md-2 col align-self-end" href="/localizacion" class="local">   Clima hoy</a>
+            </div>
+          </form>
+      </nav>
+         <main class="row mt-5 ms-0 w-100" id="container"></main>
+     
+    <div class="container">
+        <div class="current-info">
+
+            <div class="date-container">
+                <div class="time" id="time">
+                    12:30 <span id="am-pm">PM</span>
+                </div>
+                <div class="date" id="date">
+                    Monday, 25 May
+                </div>
+
+                <div class="others" id="current-weather-items">
+                    
+                    
+                </div>
+            </div>
+
+            <div class="place-container">
+                <div class="time-zone" id="time-zone">Tu pais/ciudad</div>
+                <div id="country" class="country">Lat & Long</div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="future-forecast">
+        <div class="today" id="current-temp">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png"  alt="weather icon" class="w-icon">
+            <div class="other">
+                <div class="day">Lunes</div>
+                <div class="temp">Noche - 25.6&#176; C</div>
+                <div class="temp">Dia - 35.6&#176; C</div>
+            </div>
+        </div>
+
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-forecast-item">
+                <div class="day">Martes</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Noche - 25.6&#176; C</div>
+                <div class="temp">Dia - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Miercoles</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Noche - 25.6&#176; C</div>
+                <div class="temp">Dia - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Jueves</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Noche - 25.6&#176; C</div>
+                <div class="temp">Dia - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Viernes</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Noche - 25.6&#176; C</div>
+                <div class="temp">Dia - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Sabado</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Noche - 25.6&#176; C</div>
+                <div class="temp">Dia - 35.6&#176; C</div>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/app.js"></script>
+</body>
+</html>
